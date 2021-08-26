@@ -44,6 +44,19 @@ class ViewController: UIViewController {
         SliderLabel.text = "\(currentValue)"
         
         
+        
+        let myVal = Double(currentValue)
+        let newVal = myVal * 0.01
+        
+        let bill2 = Double(billAmountTextField.text!) ?? 0
+        let tip2 = bill2 * newVal
+        let toatl2 = bill2 + tip2
+        
+        tipAmountLabel.text = String(format: "$%.2f", tip2)
+        totalLabel.text = String(format: "$%.2f", toatl2)
+        
+        
+        
     }
     
 }
