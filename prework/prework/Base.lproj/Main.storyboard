@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xf4-AV-JIR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="prework" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,12 +63,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrl-Y3-roE" userLabel="Tip Calculator Label">
-                                <rect key="frame" x="31" y="44" width="172" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-Tb-Pv3" userLabel="Tip Slider">
                                 <rect key="frame" x="39" y="299" width="316" height="30"/>
                                 <constraints>
@@ -108,15 +102,11 @@
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="leading" secondItem="Jd9-vG-vJ0" secondAttribute="leading" id="FGW-RC-fZz"/>
                             <constraint firstItem="Jd9-vG-vJ0" firstAttribute="top" secondItem="WD9-Tb-Pv3" secondAttribute="bottom" constant="47" id="Gg5-xh-NZK"/>
                             <constraint firstItem="rjq-Xo-asb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="184" id="N4f-zB-yqA"/>
-                            <constraint firstItem="Jrl-Y3-roE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W0L-6k-PtA"/>
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="centerX" secondItem="uHf-Qd-TKH" secondAttribute="centerX" id="Wh1-aV-Pta"/>
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="top" secondItem="uHf-Qd-TKH" secondAttribute="bottom" constant="31" id="cN7-Hg-gdu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jrl-Y3-roE" secondAttribute="trailing" constant="211" id="cqk-eQ-XxJ"/>
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="leading" secondItem="vbA-46-Yt0" secondAttribute="leading" id="fy9-O2-SNC"/>
-                            <constraint firstItem="tzI-2f-nMd" firstAttribute="top" secondItem="Jrl-Y3-roE" secondAttribute="bottom" constant="31" id="gI1-bk-3Ng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WD9-Tb-Pv3" secondAttribute="trailing" constant="61" id="hPX-SD-pev"/>
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="leading" secondItem="tzI-2f-nMd" secondAttribute="leading" id="hnA-f8-EZf"/>
-                            <constraint firstItem="Jrl-Y3-roE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="kWQ-BH-8ys"/>
                             <constraint firstItem="vbA-46-Yt0" firstAttribute="top" secondItem="tzI-2f-nMd" secondAttribute="bottom" constant="41" id="nSr-l4-NVC"/>
                             <constraint firstItem="tzI-2f-nMd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="125" id="naI-LF-hbA"/>
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="305" id="oRI-1U-krd"/>
@@ -126,6 +116,13 @@
                             <constraint firstItem="WD9-Tb-Pv3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="xj9-iu-GWK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="M5V-Zd-tRA">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="pao-tU-29s">
+                            <connections>
+                                <segue destination="kFD-4Z-0zc" kind="show" id="wC5-s3-Unu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="SliderLabel" destination="jxn-kf-w2j" id="k9W-eh-R4m"/>
                         <outlet property="billAmountTextField" destination="t0e-Wv-bh8" id="V5q-8k-gGg"/>
@@ -137,15 +134,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="88.392857142857139"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ptG-pq-GU1">
+            <objects>
+                <viewController id="kFD-4Z-0zc" customClass="SettingsViewController" customModule="prework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8U-uv-nDf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GSm-SX-4eQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wv3-QN-vdS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1QE-CD-QrM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6TQ-hy-tEd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xf4-AV-JIR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hrn-sa-fqP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Cok-Lk-0W6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZpN-Uc-agY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="15.942028985507248" y="88.392857142857139"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
